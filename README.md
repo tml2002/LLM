@@ -36,7 +36,8 @@
 
 ##  6.**数据注标** 
 
-- **情感分类和初步标注：** 使用情感分类模型（如ChatGPT）对多轮对话中的每一轮的每一句对话进行初步的情感分类。根据模型输出，初步标注每句话的情感标签{Anger, Disgust, Fear, Happiness, Sadness, Surprise，other}。
+- **情感分类和初步标注：** 使用情感分类模型（如ChatGPT）对多轮对话中的每一轮的每一句对话进行初步的情感分类。根据模型输出，初步标注每句话的情感标签
+-  emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]
 
 - **人工情感标注：** 经过初步标注后，对数据进行人工情感标注，确保数据的质量和一致性。人工标注员对每句话的情感进行确认和调整。
 
@@ -48,9 +49,10 @@
 
 ## 8.**数据存储和备份** 
 
-将处理后的数据存储在JSON或Dataset对象中，确保数据的安全性和可访问性。
+将处理后的数据存储在JSON对象中，确保数据的安全性和可访问性。
 
-
+**标注说明**
+文件名含有_out的json文件是进行过情感标注的，按照情感标签emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]的索引保存。
 
 
 
