@@ -39,7 +39,34 @@
 - **情感分类和初步标注：** 使用情感分类模型（如ChatGPT）对多轮对话中的每一轮的每一句对话进行初步的情感分类。根据模型输出，初步标注每句话的情感标签
 -  emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]
 
+-  **标注说明**
+   文件名含有_out的json文件是进行过情感标注的，按照情感标签emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]的索引保存。
+   
+   gpt判断不出来的标注为 Other 
+   
+   "Anger": 0
+   
+   "Disgust": 1
+   
+   "Fear" : 2
+   
+   "Happiness": 3
+   
+   "Sadness" 4
+   
+   "Surprise": 5
+   
+   "Neutral" : 6
+   
+   "Frustrated": 7
+   
+   "Excited": 8
+   
+   "Other": 9
+
 - **人工情感标注：** 经过初步标注后，对数据进行人工情感标注，确保数据的质量和一致性。人工标注员对每句话的情感进行确认和调整。
+
+   人工标注可能**重点**需要看分类结果为6的"Netural"
 
 - **数据平衡：** 确保不同情感类别的问答对数量相对平衡，以防止数据集倾斜。 
 
@@ -51,8 +78,6 @@
 
 将处理后的数据存储在JSON对象中，确保数据的安全性和可访问性。
 
-**标注说明**
-文件名含有_out的json文件是进行过情感标注的，按照情感标签emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]的索引保存。
 
 
 
