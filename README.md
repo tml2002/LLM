@@ -40,7 +40,10 @@
 -  emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]
 
 -  **标注说明**
-   文件名含有_out的json文件是进行过情感标注的，按照情感标签emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]的索引保存。
+
+   unlabel_data文件中的json文件是没有进行情感标注的。
+   
+   label_data文件夹中的json文件是进行过情感标注的，按照情感标签emotion_labels = ["Anger", "Disgust", "Fear", "Happiness", "Sadness", "Surprise", "Neutral", "Frustrated", "Excited", "Other"]的索引保存。
    
    gpt判断不出来的标注为 Other 
    
